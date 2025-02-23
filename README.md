@@ -12,18 +12,20 @@ The Notebook contains recommender based system models.
 1. Collaborative filtering
 2. Hybrid (Collaborative filtering & Content based)
 
-#Evaluation
+# Evaluation
 The performance is measured using:
 1. RMSE
 2. Precison@k
 3. Recall@k
 
-| Training Instance | Optimizer Used (Adam, RMSProp) | Regularizer Used (L1, L2) | Epochs | Early Stopping (Yes/No) | Number of Layers | Learning Rate | Accuracy | F1 Score | Recall | Precision |
-|-------------------|-------------------------------|---------------------------|--------|-------------------------|------------------|---------------|----------|----------|--------|-----------|
-| Instance 1        |                               |                           |        |                         |                  |               |          |          |        |           |
-| Instance 2        |                               |                           |        |                         |                  |               |          |          |        |           |
-| Instance 3        |                               |                           |        |                         |                  |               |          |          |        |           |
-| Instance 4        |                               |                           |        |                         |                  |               |          |          |        |           |
-| Instance 5        |                               |                           |        |                         |                  |               |          |          |        |           |
+# Table
+## 📊 Model Performance Comparison
+
+| Training Instance | Model                   | Similarity Metric        | Weight Balancing                                | Truncated SVD | Top K | RMSE  | Precision@K | Recall@K |
+|------------------|------------------------|-------------------------|------------------------------------------------|--------------|------|------|-------------|----------|
+| Instance 1      | Collaborative Filtering | Cosine Similarity       | -                                              | -            | 5    | 0    | 0.0023      | 0.0116   |
+| Instance 2      | Collaborative Filtering | Pearson                 | -                                              | -            | 10   | 0    | 0.0023      | 0.0116   |
+| Instance 3      | Hybrid                  | Cosine & Pearson        | content_weight - 0.4, cf_weight - 0.4, svd_weight - 0.2 | 100          | -    | 0.2451 | 0.0047      | 0.0349   |
+
 
 

@@ -28,4 +28,5 @@ The performance is measured using:
 | Instance 3      | Hybrid                  | Cosine & Pearson        | content_weight - 0.4, cf_weight - 0.4, svd_weight - 0.2 | 100          | -    | 0.2451 | 0.0047      | 0.0349   |
 
 
-
+# Video Recording
+https://drive.google.com/file/d/1YudrbLSqrS19COvHd1tWzLVGfkeMwfZE/view?usp=sharing
